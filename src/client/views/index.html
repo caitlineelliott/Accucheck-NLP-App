@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="shortcut icon" type="image/jpg" href="/src/client/imgs/favicon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="../imgs/favicon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -30,17 +30,73 @@
     </header>
 
     <main>
-        <section>
-            <form class="" onsubmit="return handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <button id="submit-btn">Submit</button>
-            </form>
-        </section>
+        <div id="container">
+            <div id="col1">
+                <div class="title">
+                    <h1>The news is overwhelming,<br> <span class="heavy-font">but it doesn't have to be.</span></h1>
+                </div>
+                <div class="description">
+                    <p>
+                        AccuCheck takes the stress out of your scroll! With our premium AI,
+                        AccuCheck helps you
+                        identify fact vs. opinion, real vs. fake, and keeps you up to date with the latest news on
+                        your
+                        feed. test
+                    </p>
+                    <p>
+                        Paste the URL of an articles you're reading below and AccuCheck will tell you if the source
+                        is
+                        <span id="fact">fact-based</span>, <span id="opinion">opinion</span>, or <span
+                            id="satire">satire</span>.
+                    </p>
+                </div>
 
-        <section id="form-results">
-            <strong>Form Results:</strong>
-            <div id="results"></div>
-        </section>
+                <form class="">
+                    <input id="URLname" type="url" name="input" value="" placeholder="Paste your URL here" required>
+                    <button id="submit-btn">submit</button>
+                </form>
+
+                <div class="form-results">
+                    <div class="results-container">
+                        <h3>Your article, "What Covid-19 testing looks like in the age of vaccines" from Vox.com
+                            returned the following results...</h3>
+                        <div id="results-col1">
+                            <div class="results-headers">
+                                <p>Score Tag:</p>
+                                <p>Agreement:</p>
+                                <p>Subjectivity:</p>
+                            </div>
+                            <div>
+                                <p id="score-tag" class="meaning-cloud-data"></p>
+                                <p id="agreement" class="meaning-cloud-data"></p>
+                                <p id="subjectivity" class="meaning-cloud-data"></p>
+                            </div>
+                        </div>
+                        <div id="results-col2">
+                            <div class="results-headers">
+                                <p>Confidence:</p>
+                                <p>Irony:</p>
+                                <!-- <p>Sentiment:</p> -->
+                            </div>
+                            <div>
+                                <p id="confidence" class="meaning-cloud-data"></p>
+                                <p id="irony" class="meaning-cloud-data"></p>
+                                <!-- <p>Positive</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back-btn"><a href="index.html"><i class="fas fa-arrow-circle-left"></i>
+                            Back</a></button>
+                </div>
+                <div id="disclaimer"><a href="#"><i class="far fa-info-circle"></i> Find out more about how we
+                        classify
+                        articles.</a></div>
+            </div>
+            <div id="col2">
+                <!-- <img src="/src/client/imgs/analysis.svg" width="100%"> -->
+                <img src="https://www.opexengine.com/wp-content/uploads/2020/01/Financial-Analysis.png" width="100%">
+            </div>
+        </div>
     </main>
 
     <footer>
