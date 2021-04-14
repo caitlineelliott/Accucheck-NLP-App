@@ -1,16 +1,21 @@
+let formBtn = document.querySelector('#submit-btn');
+formBtn.addEventListener('click', handleSubmit);
+
 function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    checkForName(formText)
+    // capture user URL input
+    let userURL = document.getElementById('name').value;
+    console.log(userURL);
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
-        .then(res => res.json())
-        .then(function (res) {
-            document.getElementById('results').innerHTML = res.message
-        })
+    // checkForName(formText)
+
+    // console.log("::: Form Submitted :::")
+    // fetch('http://localhost:8080/test')
+    //     .then(res => res.json())
+    //     .then(function (res) {
+    //         document.getElementById('results').innerHTML = res.message
+    //     })
 }
 
 export { handleSubmit }
