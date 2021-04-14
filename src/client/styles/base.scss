@@ -1,0 +1,42 @@
+$font-family: 'Montserrat', sans-serif;
+$font-size: 0.9em;
+
+$main-bg: #fff;
+
+$red: #7d1538;
+$red-hover: #bc2c1a;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family;
+}
+
+a {
+    color: $red;
+
+    &:hover {
+        color: $red-hover;
+    }
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    height: 100vh;
+
+    #col1 {
+        width: 50vw;
+        padding: 0 50px;
+    }
+
+    #col2 {
+        width: 50vw;
+        padding: 10px;
+    }
+}
