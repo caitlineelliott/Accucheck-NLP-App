@@ -3,6 +3,7 @@ function updateUI(data) {
 
     // show results
     document.querySelector('.form-results').classList.add('display-on');
+    // document.querySelector('.results-container').classList.add('display-on');
 
     // add data to results table
     document.querySelector('#score-tag').innerHTML = data.scoreTag;

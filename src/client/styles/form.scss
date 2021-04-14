@@ -69,14 +69,17 @@ input::placeholder {
     display: none;
 
     &.display-on {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .results-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         background: #e6e6e6;
-        padding: 10px;
-    }
-
-    .results-container {
+        padding: 20px;
+        margin-bottom: 10px;
 
         .results-headers {
             font-weight: 700;
