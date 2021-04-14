@@ -1,25 +1,20 @@
 import { checkURL } from './checkURL.js'
+import { sendData } from './sendData.js'
 
 let formBtn = document.querySelector('#submit-btn');
 formBtn.addEventListener('click', handleSubmit);
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
     event.preventDefault();
 
     // capture user URL input
     let userURL = document.getElementById('name').value;
-    console.log(userURL);
 
-    checkURL(userURL);
+    // validate URL
+    const validURL = checkURL(userURL);
 
-    // checkForName(formText)
-
-    // console.log("::: Form Submitted :::")
-    // fetch('http://localhost:8080/test')
-    //     .then(res => res.json())
-    //     .then(function (res) {
-    //         document.getElementById('results').innerHTML = res.message
-    //     })
+    // send valid URL to server + analyze with MeaningCloud
+    await sendData('/passURL', validURL);
 }
 
 export { handleSubmit }

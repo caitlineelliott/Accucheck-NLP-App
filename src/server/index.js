@@ -1,3 +1,5 @@
+projectData = {}
+
 var path = require('path')
 const express = require('express')
 
@@ -16,6 +18,20 @@ app.listen(8080, function () {
     console.log('Example app listening on port 8080!')
 })
 
-// app.get('/test', function (req, res) {
-//     res.send(mockAPIResponse)
-// })
+// receives data from client
+app.post('/passURL', async function (req, res) {
+    // const userURL = req.body;
+
+    // const sentiment = await getSentiment(userURL.data, apiKey);
+
+    // projectData['url'] = userURL.data;
+    // projectData['scoreTag'] = sentiment.score_tag;
+    // projectData['agreement'] = sentiment.agreement;
+    // projectData['subjectivity'] = sentiment.subjectivity;
+    // projectData['confidence'] = sentiment.confidence;
+    // projectData['irony'] = sentiment.irony;
+
+
+    console.log(projectData);
+    // res.send(projectData);
+});
