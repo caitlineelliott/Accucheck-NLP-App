@@ -101,6 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 console.log(_js_handleSubmit__WEBPACK_IMPORTED_MODULE_0__["handleSubmit"]);
 
 alert('i exist!');
+alert('i exist!');
 
 /***/ }),
 
