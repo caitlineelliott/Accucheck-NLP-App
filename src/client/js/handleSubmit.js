@@ -7,6 +7,10 @@ formBtn.addEventListener('click', handleSubmit);
 async function handleSubmit(event) {
     event.preventDefault();
 
+    // hide description + display loading dial
+    const formDescription = document.querySelector('.description');
+    formDescription.classList.toggle('closed');
+
     // capture user URL input
     let userURL = document.getElementById('name').value;
 
