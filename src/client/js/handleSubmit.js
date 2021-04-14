@@ -1,3 +1,5 @@
+import { checkURL } from './checkURL.js'
+
 let formBtn = document.querySelector('#submit-btn');
 formBtn.addEventListener('click', handleSubmit);
 
@@ -7,6 +9,8 @@ function handleSubmit(event) {
     // capture user URL input
     let userURL = document.getElementById('name').value;
     console.log(userURL);
+
+    checkURL(userURL);
 
     // checkForName(formText)
 
