@@ -1,3 +1,5 @@
+import { updateUI } from "./updateUI";
+
 const sendData = async (url = '', data = {}) => {
     try {
         console.log(`DATA SENT TO SERVER`);
@@ -13,6 +15,7 @@ const sendData = async (url = '', data = {}) => {
             .then((res) => res.json())
             .then((res) => {
                 console.log('here is your data', res);
+                updateUI(res);
             })
     } catch (e) {
         console.log(e);
