@@ -1,11 +1,21 @@
 projectData = {}
 
+const dotenv = require('dotenv');
+dotenv.config()
+
+const apiKey = process.env.API_KEY;
+
 var path = require('path')
 const express = require('express')
+const fetch = require('node-fetch')
 
 const app = express()
 
 app.use(express.static('dist'))
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded());
 
 console.log(__dirname)
 
@@ -20,18 +30,27 @@ app.listen(8080, function () {
 
 // receives data from client
 app.post('/passURL', async function (req, res) {
-    // const userURL = req.body;
+    const userURL = req.body.data.url;
 
-    // const sentiment = await getSentiment(userURL.data, apiKey);
+    const sentiment = await getSentiment(userURL, apiKey);
 
-    // projectData['url'] = userURL.data;
-    // projectData['scoreTag'] = sentiment.score_tag;
-    // projectData['agreement'] = sentiment.agreement;
-    // projectData['subjectivity'] = sentiment.subjectivity;
-    // projectData['confidence'] = sentiment.confidence;
-    // projectData['irony'] = sentiment.irony;
-
+    projectData['url'] = userURL;
+    projectData['scoreTag'] = sentiment.score_tag;
+    projectData['agreement'] = sentiment.agreement;
+    projectData['subjectivity'] = sentiment.subjectivity;
+    projectData['confidence'] = sentiment.confidence;
+    projectData['irony'] = sentiment.irony;
 
     console.log(projectData);
-    // res.send(projectData);
+    res.send(projectData);
 });
+
+const getSentiment = async (url, apiKey) => {
+    try {
+        const request = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&lang=auto&url=${url}`);
+        return await request.json();
+    }
+    catch (e) {
+        console.log('Failed to fetch', e)
+    }
+}
