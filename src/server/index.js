@@ -13,6 +13,10 @@ const app = express()
 
 app.use(express.static('dist'))
 
+// Cors for cross origin allowance
+const cors = require('cors');
+app.use(cors());
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded());
