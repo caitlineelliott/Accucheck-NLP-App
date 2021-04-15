@@ -131,6 +131,10 @@ input::placeholder {
         margin-bottom: 20px;
         font-size: $font-size;
 
+        #results-intro {
+            line-height: 1.2em;
+        }
+
         .results-headers {
             font-weight: 700;
             text-align: right;
