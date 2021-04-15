@@ -8,8 +8,11 @@ function updateUI(data) {
     // add data to results table
     let authorTitle = data.title;
     let array = authorTitle.split(' - ', 2);
+    let title = array[0];
+    let outlet = array[1].italics();
 
-    document.querySelector('#results-intro').innerHTML = `Your article, "${array[0]}", from ${array[1]} returned the following results:`;
+    document.querySelector('#title').innerHTML = title;
+    document.querySelector('#outlet').innerHTML = outlet;
 
     document.querySelector('#score-tag').innerHTML = data.scoreTag;
     document.querySelector('#agreement').innerHTML = data.agreement;
