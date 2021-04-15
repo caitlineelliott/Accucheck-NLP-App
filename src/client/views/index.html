@@ -65,34 +65,33 @@
                 </div>
 
                 <div class="form-results">
+                    <p id="results-intro"></p>
                     <div class="results-container">
-                        <p id="results-intro"></p>
-                        <div id="results-col1">
-                            <div class="results-headers">
-                                <p>Score Tag:</p>
-                                <p>Subjectivity:</p>
-                                <p>Agreement:</p>
-                            </div>
-                            <div>
-                                <p id="score-tag" class="meaning-cloud-data"></p>
-                                <p id="subjectivity" class="meaning-cloud-data"></p>
-                                <p id="agreement" class="meaning-cloud-data"></p>
-                            </div>
+                        <div class="results">
+                            <div id="score-tag" class="meaning-cloud-data"></div>
+                            <div id="subjectivity" class="meaning-cloud-data"></div>
+                            <div id="agreement" class="meaning-cloud-data"></div>
+                            <div id="irony" class="meaning-cloud-data"></div>
                         </div>
-                        <div id="results-col2">
-                            <div class="results-headers">
-                                <p>Confidence:</p>
-                                <p>Irony:</p>
-                                <!-- <p>Sentiment:</p> -->
+
+                        <div class="results-description">
+                            <div>
+                                Marks the polarity of the article. Possible values: strong positive, positive, neutral,
+                                negative, strong negative, or no polarity.
                             </div>
                             <div>
-                                <p id="confidence" class="meaning-cloud-data"></p>
-                                <p id="irony" class="meaning-cloud-data"></p>
-                                <!-- <p>Positive</p> -->
+                                Marks the subjectivity of the article. Possible values: objective or subjective.
                             </div>
+
+                            <div>
+                                Marks the agreement between the sentiments in the article. Possible values: agreement or
+                                disagreement.
+                            </div>
+                            <div>Indicates the irony level of the article. Possible values: ironic or non-ironic.</div>
                         </div>
                     </div>
                 </div>
+
                 <div id="disclaimer"><a href="#"><i class="far fa-info-circle"></i> Find out more about how we
                         classify
                         articles.</a></div>

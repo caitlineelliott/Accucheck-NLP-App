@@ -43,19 +43,19 @@ input, button {
     padding: 1vw;
     width: 100%;
     margin: 10px 0;
-    background: #d3f3ee;
+    background: $blue;
     border: none;
     font-family: $font-family;
     font-size: $font-size;
 }
 
 button {
-    color: #7fb7be;
+    color: $blue-text;
     text-align: left;
 }
 
 input::placeholder {
-    color: #7fb7be;
+    color: $blue-text;
     font-family: $font-family;
     font-size: $font-size;
 
@@ -115,46 +115,51 @@ input::placeholder {
 
 .form-results {
     display: none;
-    height: 35vh;
 
     &.display-on {
         display: block;
-        margin: 10px 0;
+        height: 35vh;
+        padding: 20px;
+        margin: 20px 0;
+        border: 8px solid #e6e6e6;
+        border-radius: 5px;
     }
 
+    #results-intro {
+        line-height: 1.2em;
+      }
+
     .results-container {
+        margin: 20px 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        background: #e6e6e6;
-        padding: 20px;
-        margin-bottom: 20px;
-        font-size: $font-size;
-        height: 35vh;
+        font-size: 0.9em;
 
-        #results-intro {
-            line-height: 1.2em;
-        }
-
-        .results-headers {
+          .results {
             font-weight: 700;
-            text-align: right;
-        }
+            width: 25%;
+          }
 
-        #results-col1,
-        #results-col2 {
-            font-size: $font-size;
-            margin-top: 10px;
-            width: 50%;
+          .results-description {
+              width: 75%;
+              font-size: 0.85em;
+          }
+
+          .results-headers,
+          .results,
+          .results-description {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
-            p {
-                padding: 5px;
-            }
-
-            .meaning-cloud-data {
-                padding-left: 10px;
+            div {
+                background: $blue;
+                color: $red;
+                margin: 0 0 10px 0;
+                height: 2.5vw;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
             }
         }
     }

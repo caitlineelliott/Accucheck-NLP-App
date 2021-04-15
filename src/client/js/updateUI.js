@@ -14,7 +14,6 @@ function updateUI(data) {
     document.querySelector('#score-tag').innerHTML = data.scoreTag;
     document.querySelector('#agreement').innerHTML = data.agreement;
     document.querySelector('#subjectivity').innerHTML = data.subjectivity;
-    document.querySelector('#confidence').innerHTML = data.confidence;
     document.querySelector('#irony').innerHTML = data.irony;
 }
 
