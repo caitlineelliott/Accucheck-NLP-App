@@ -17,7 +17,7 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     // hide description + display loading dial/back btn
-    document.querySelector('.description').classList.toggle('closed');
+    document.querySelector('.starter-form').classList.toggle('closed');
     document.querySelector('.form-loader').classList.toggle('display-on');
     document.querySelector('.back-btn').classList.toggle('display-on');
 

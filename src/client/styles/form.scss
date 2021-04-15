@@ -18,24 +18,28 @@ form {
     font-weight: 700;
 }
 
-.description {
-    line-height: 3vh;
-    margin-bottom: 10px;
-    font-family: $font-family;
-    font-size: $font-size;
-
+.starter-form {
     overflow-y: hidden;
 	max-height: 300px; /* approximate max height */
 
 	transition-property: all;
-	transition-duration: 0.8s;
+	transition-duration: 1.3s;
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     background: white;
 
     &.closed {
         max-height: 0;
     }
+
+    .description {
+        line-height: 3vh;
+        margin-bottom: 10px;
+        font-family: $font-family;
+        font-size: $font-size;
+    }
 }
+
+
 
 input, button {
     padding: 1vw;
