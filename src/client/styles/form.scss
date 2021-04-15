@@ -134,7 +134,12 @@ input::placeholder {
     }
 
     #results-intro {
-        line-height: 1.2em;
+        line-height: 1.25vh;
+        height: 4vh;
+
+        #results-text {
+            font-size: 1.25vh;
+        }
 
         #outlet {
             font-style: italic;
