@@ -129,6 +129,7 @@ input::placeholder {
         background: #e6e6e6;
         padding: 20px;
         margin-bottom: 20px;
+        font-size: $font-size;
 
         .results-headers {
             font-weight: 700;
@@ -137,6 +138,7 @@ input::placeholder {
 
         #results-col1,
         #results-col2 {
+            font-size: $font-size;
             margin-top: 10px;
             width: 50%;
             display: flex;

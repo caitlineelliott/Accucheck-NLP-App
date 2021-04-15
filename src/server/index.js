@@ -33,7 +33,9 @@ app.post('/passURL', async function (req, res) {
     const userURL = req.body.data.url;
 
     const sentiment = await getSentiment(userURL, apiKey);
+    const title = await getTitle(userURL, apiKey);
 
+    projectData['title'] = title.title;
     projectData['url'] = userURL;
     projectData['scoreTag'] = sentiment.score_tag;
     projectData['agreement'] = sentiment.agreement;
@@ -48,6 +50,16 @@ app.post('/passURL', async function (req, res) {
 const getSentiment = async (url, apiKey) => {
     try {
         const request = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&lang=auto&url=${url}`);
+        return await request.json();
+    }
+    catch (e) {
+        console.log('Failed to fetch', e)
+    }
+}
+
+const getTitle = async (url, apiKey) => {
+    try {
+        const request = await fetch(`https://api.meaningcloud.com/documentstructure-1.0?key=${apiKey}&lang=auto&url=${url}`)
         return await request.json();
     }
     catch (e) {
