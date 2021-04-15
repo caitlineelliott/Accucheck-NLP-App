@@ -3,21 +3,23 @@ import { sendData } from './sendData.js'
 import Favicon from '../imgs/favicon.png'
 import AnalysisImg from '../imgs/analysis.svg'
 
+// load in images
 const faviconImg = document.querySelector('#favicon-img');
 const analysisImg = document.querySelector('#analysis-img');
-
 faviconImg.href = Favicon;
 analysisImg.src = AnalysisImg;
 
+// handle submit
 let formBtn = document.querySelector('#submit-btn');
 formBtn.addEventListener('click', handleSubmit);
 
 async function handleSubmit(event) {
     event.preventDefault();
 
-    // hide description + display loading dial
-    const formDescription = document.querySelector('.description');
-    formDescription.classList.toggle('closed');
+    // hide description + display loading dial/back btn
+    document.querySelector('.description').classList.toggle('closed');
+    document.querySelector('.form-loader').classList.toggle('display-on');
+    document.querySelector('.back-btn').classList.toggle('display-on');
 
     // capture user URL input
     let userURL = document.getElementById('name').value;
