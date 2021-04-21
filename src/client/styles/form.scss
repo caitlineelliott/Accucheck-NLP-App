@@ -8,6 +8,201 @@ form {
     color: $red;
     font-family: $font-family;
     font-weight: 400;
+    font-size: 5.5vw;
+    line-height: 3.5vh;
+    margin-bottom: 50px;
+}
+
+.heavy-font {
+    font-weight: 700;
+}
+
+.starter-form {
+    overflow-y: hidden;
+	max-height: 100vw; /* approximate max height */
+    margin: 30px 0 50px 0;
+
+	transition-property: all;
+	transition-duration: 1.3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    background: white;
+
+    &.closed {
+        max-height: 0;
+    }
+
+    .description {
+        font-family: $font-family;
+        font-size: 3.5vw;
+        line-height: 4vw;
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+input, button {
+    padding: 2vw;
+    width: 100%;
+    margin: 20px 0;
+    background: $blue;
+    border: none;
+    font-family: $font-family;
+    font-size: 3.5vw;
+    color: $red;
+}
+
+button {
+    color: $red;
+    text-align: left;
+    font-size: 3.5vw;
+
+    &:hover {
+        background: $blue-text;
+        cursor: pointer;
+        transition: 500ms;
+    }
+}
+
+input::placeholder {
+    color: $red;
+    font-family: $font-family;
+    font-size: $font-size;
+
+}
+
+#disclaimer {
+    color: $red-hover;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.form-loader {
+    display: none;
+
+    &.display-on {
+        display: block;
+        height: 35vh;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .favicon {
+            width: 40px;
+            height: 40px;
+            margin: 100px auto;
+
+            border-radius: 100%;
+            -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+            animation: sk-scaleout 1.0s infinite ease-in-out;
+            i {
+                color: $red;
+                font-size: 8vw;
+            }
+        //   }
+
+          @-webkit-keyframes sk-scaleout {
+            0% { -webkit-transform: scale(0) }
+            100% {
+              -webkit-transform: scale(1.0);
+              opacity: 0;
+            }
+          }
+
+          @keyframes sk-scaleout {
+            0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+            } 100% {
+              -webkit-transform: scale(1.0);
+              transform: scale(1.0);
+            }
+          }
+    }
+
+    }
+}
+
+.form-results {
+    display: none;
+
+    &.display-on {
+        display: block;
+        padding: 20px;
+        margin: 20px 0;
+        border: 8px solid #e6e6e6;
+        border-radius: 5px;
+    }
+    
+
+    #results-intro {
+        line-height: 1.25vh;
+        height: 6vh;
+
+        #results-text {
+        font-size: 3.5vw;
+        }
+
+        #outlet {
+        font-style: italic;
+        }
+    }
+
+    .results-container {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 3.5vw;
+
+          .results {
+            font-weight: 700;
+            width: 45%;
+          }
+
+          .results-description {
+              width: 55%;
+              font-size: 3vw;
+          }
+
+          .results-headers,
+          .results,
+          .results-description {
+            display: flex;
+            flex-direction: column;
+            div {
+                background: $blue;
+                color: $red;
+                margin: 0 0 10px 0;
+                height: 25vw;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.back-btn {
+    display: none;
+
+    &.display-on {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+/*
+form {
+    background: $main-bg;
+}
+
+.title {
+    color: $red;
+    font-family: $font-family;
+    font-weight: 400;
     font-size: 4vh;
     width: 32vw;
     line-height: 5vh;
@@ -20,7 +215,7 @@ form {
 
 .starter-form {
     overflow-y: hidden;
-	max-height: 300px; /* approximate max height */
+	max-height: 300px; /* approximate max height 
 
 	transition-property: all;
 	transition-duration: 1.3s;
@@ -190,3 +385,5 @@ input::placeholder {
         margin-top: 10px;
     }
 }
+
+*/

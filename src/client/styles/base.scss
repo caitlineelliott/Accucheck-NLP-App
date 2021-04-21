@@ -9,6 +9,44 @@ $red-hover: #bc2c1a;
 $blue: #d3f3ee;
 $blue-text: #7fb7be;
 
+/* MOBILE */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: $font-family;
+}
+
+a {
+    color: $red;
+
+    &:hover {
+        color: $red-hover;
+    }
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    #col1, #col2 {
+        width: 75vw;
+    }
+
+    #col2 {
+        margin-top: 50px;
+    }
+}
+
+/* TABLET
+
+/* DESKTOP 
 body {
     display: flex;
     flex-direction: column;
@@ -43,3 +81,5 @@ a {
         padding: 10px;
     }
 }
+
+*/
