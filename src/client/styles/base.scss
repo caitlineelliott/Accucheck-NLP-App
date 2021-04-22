@@ -1,7 +1,7 @@
 $font-family: 'Montserrat', sans-serif;
 $font-size: 0.9em;
 
-$main-bg: #fff;
+$main-bg: transparent;
 
 $red: #7d1538;
 $red-hover: #bc2c1a;
@@ -41,6 +41,10 @@ a {
 
     #col2 {
         margin-top: 50px;
+
+        #analysis-img {
+            width: 100%;
+        }
     }
 }
 
@@ -49,11 +53,27 @@ a {
 @media screen and (min-width: 768px) {
     #container {
         height: 100vh;
+        // background: green;
 
-        #col1, #col2 {
+        #col1 {
             width: 65vw;
+            height: 50vh;
+            // background: red;
+        }
+
+        #col2 {
+            width: 65vw;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            // background: blue;
+
+            #analysis-img {
+                width: 70%;
+            }
         }
     }
+
 }
 
 /* DESKTOP 
