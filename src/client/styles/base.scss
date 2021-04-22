@@ -9,8 +9,6 @@ $red-hover: #bc2c1a;
 $blue: #d3f3ee;
 $blue-text: #7fb7be;
 
-/* MOBILE */
-
 body {
     display: flex;
     flex-direction: column;
@@ -27,38 +25,38 @@ a {
     }
 }
 
+/* MOBILE */
 #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
 
-    #col1, #col2 {
-        width: 75vw;
-    }
+        #col1, #col2 {
+            width: 80vw;
+            height: 30vh;
+            background: green;
 
-    #col2 {
-        margin-top: 50px;
+        }
 
-        #analysis-img {
-            width: 100%;
+        #col2 {
+            margin-top: 50px;
+            background: red;
+
+            #analysis-img {
+                width: 100%;
+            }
         }
     }
-}
 
-/* TABLET */
-
-@media screen and (min-width: 768px) {
-    #container {
+@media only screen and (min-width: 768px) {
+#container {
         height: 100vh;
-        // background: green;
 
         #col1 {
             width: 65vw;
-            height: 50vh;
-            // background: red;
         }
 
         #col2 {
@@ -66,19 +64,16 @@ a {
             height: 30vh;
             display: flex;
             justify-content: center;
-            // background: blue;
+            background: blue;
 
             #analysis-img {
                 width: 70%;
             }
         }
     }
-
 }
 
-
-/* DESKTOP */
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
     #container {
         flex-direction: row;
 
@@ -93,6 +88,7 @@ a {
             width: 50vw;
             height: 60vh;
             padding: 10px 10px 10px 0;
+            background: pink;
             margin: 0 50px 0 0;
 
             #analysis-img {
