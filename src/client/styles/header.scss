@@ -90,3 +90,31 @@ header {
     cursor: pointer;
 }
 }
+
+@media only screen and (min-width: 768px) {
+    header {
+        font-size: 2.5vw;
+
+        #head-left {
+            width: 50%;
+            text-align: left;
+        }
+
+        #head-right {
+            font-family: $font-family;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            width: 50%;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            line-height: 4vw;
+        }
+
+        .nav, .hamburger-icon {
+            display: none;
+        }
+    }
+}

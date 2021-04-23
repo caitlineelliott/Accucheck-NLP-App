@@ -55,21 +55,21 @@ a {
 
 @media only screen and (min-width: 768px) {
 #container {
-        height: 100vh;
 
         #col1 {
             width: 65vw;
+            height: 50vh;
         }
 
         #col2 {
             width: 65vw;
-            height: 30vh;
+            height: 20vh;
             display: flex;
-            justify-content: center;
-            background: blue;
+            align-items: center;
+            justify-content: flex-start;
 
             #analysis-img {
-                width: 70%;
+                width: 60%;
             }
         }
     }
