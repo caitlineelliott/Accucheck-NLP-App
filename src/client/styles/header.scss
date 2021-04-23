@@ -118,3 +118,13 @@ header {
         }
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    header {
+        font-size: 2vh;
+        #head-right {
+            line-height: 2.5vh;
+            right: 10px;
+        }
+    }
+}

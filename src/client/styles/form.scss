@@ -194,7 +194,7 @@ input::placeholder {
 }
 
 /* TABLET STYLES */
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .title {
         font-size: 3.5vw;
     }
@@ -210,15 +210,14 @@ input::placeholder {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .title {
         font-size: 4vh;
         line-height: 5vh;
-        margin-bottom: 0px;
     }
 
     .starter-form {
-        max-height: 300px;
+        // max-height: 300px;
 
         .description {
             font-size: $font-size;
