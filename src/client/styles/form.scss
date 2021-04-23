@@ -10,7 +10,7 @@ form {
     font-weight: 400;
     font-size: 5.5vw;
     line-height: 3.5vh;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .heavy-font {
@@ -19,8 +19,8 @@ form {
 
 .starter-form {
     overflow-y: hidden;
-	max-height: 100vw; /* approximate max height */
-    margin: 30px 0 50px 0;
+	// max-height: 100vw; /* approximate max height */
+    // margin: 30px 0 50px 0;
 
 	transition-property: all;
 	transition-duration: 1.3s;
@@ -44,7 +44,7 @@ form {
 input, button {
     padding: 2vw;
     width: 100%;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     background: $blue;
     border: none;
     font-family: $font-family;
@@ -53,6 +53,7 @@ input, button {
 }
 
 button {
+    margin: 0 0 20px 0;
     color: $red;
     text-align: left;
     font-size: 3.5vw;
