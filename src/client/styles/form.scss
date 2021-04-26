@@ -209,6 +209,21 @@ input::placeholder {
     input, button {
         font-size: 2.5vw;
     }
+
+    .form-results {
+        #results-intro {
+            #results-text {
+                font-size: 2.5vw;
+            }
+        }
+
+        .results-container {
+            font-size: 2.5vw;
+            .results-description {
+                font-size: 2.5vw;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -218,7 +233,6 @@ input::placeholder {
     }
 
     .starter-form {
-        // max-height: 300px;
 
         .description {
             font-size: $font-size;
@@ -239,8 +253,23 @@ input::placeholder {
             }
         }
     }
+
+    .form-results {
+        #results-intro {
+            #results-text {
+                font-size: 3vh;
+            }
+        }
+
+        .results-container {
+            font-size: 3vh;
+            .results-description {
+                font-size: 3vh;
+            }
+        }
+    }
 }
- 
+
 /*
 
 .form-loader {
