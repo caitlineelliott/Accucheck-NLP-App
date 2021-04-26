@@ -246,10 +246,12 @@ input::placeholder {
     }
 
     .form-loader {
-        .favicon {
-            i {
-                font-size: 5vw;
-            }
+        &.display-on {
+            .favicon {
+                i {
+                    font-size: 3vw;
+                }
+        }
         }
     }
 
