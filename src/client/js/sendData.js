@@ -1,6 +1,6 @@
 import { updateUI } from "./updateUI";
 
-const sendData = async (url = '', data = {}) => {
+async function sendData(url = '', data = {}) {
     try {
         console.log(`DATA SENT TO SERVER`);
         fetch(url, {
