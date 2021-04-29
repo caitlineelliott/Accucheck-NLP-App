@@ -7,10 +7,6 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     entry: './src/client/index.js',
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
-    },
     module: {
         rules: [
             {
@@ -20,17 +16,22 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(png|jp(e*)g|svg)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 8000, // Convert images < 8kb to base64 strings
-                        name: 'images/[hash]-[name].[ext]'
-                    }
-                }]
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+            {
+                test: /\.(jpeg|png|svg|gif|)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[hash:6].[ext]',
+                    outputPath: 'imgs',
+                    publicPath: 'imgs',
+                    emitFile: true,
+                    esModule: false
+                }
             }
         ]
     },

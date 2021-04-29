@@ -13,10 +13,6 @@ module.exports = {
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]
     },
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
-    },
     module: {
         rules: [
             {
@@ -29,19 +25,20 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jp(e*)g|svg)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 8000, // Convert images < 8kb to base64 strings
-                        name: 'images/[hash]-[name].[ext]'
-                    }
-                }]
-            },
-            {
                 test: /\.html$/i,
                 loader: 'html-loader',
             },
+            {
+                test: /\.(jpeg|png|svg|gif|)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[hash:6].[ext]',
+                    outputPath: 'imgs',
+                    publicPath: 'imgs',
+                    emitFile: true,
+                    esModule: false
+                }
+            }
         ]
     },
     plugins: [
