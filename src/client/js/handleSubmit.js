@@ -9,7 +9,6 @@ import { sendData } from './sendData.js'
 // faviconImg.href = Favicon;
 // analysisImg.src = AnalysisImg;
 
-// handle submit
 document.addEventListener('DOMContentLoaded', function () {
     let formBtn = document.querySelector('#submit-btn');
     formBtn.addEventListener('click', handleSubmit);

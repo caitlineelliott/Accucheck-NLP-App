@@ -1,1 +1,120 @@
-<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link id="favicon-img" rel="shortcut icon" type="image/jpg"/><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"><title>AccuCheck</title></head><body><header><header><div id="head-left"><a href="index.html"><i class="fas fa-check-circle"></i><span class="heavy-font">Accu</span>Check</a></div><div id="head-right"><a class="nav-links" href="#">About</a> <a class="nav-links" href="#">Download App</a> <a class="nav-links" href="#">Pricing</a> <a class="nav-links" href="#">Log In</a></div><nav class="nav"><div class="nav-list"></div><span class="close-btn"><i class="fas fa-times"></i></span></nav><div class="hamburger-icon"><i class="fas fa-bars"></i></div></header></header><main><div id="container"><div id="col1"><div class="title"><h1>The news is overwhelming,<br><span class="heavy-font">but it doesn't have to be.</span></h1></div><div class="starter-form">x<div class="description"><p>AccuCheck takes the stress out of your scroll! With our premium AI, AccuCheck helps you identify fact vs. opinion, real vs. fake, and keeps you up to date with the latest news on your feed.</p><p>Paste the URL of an articles you're reading below and AccuCheck will tell you if the source is <span id="fact">fact-based</span>, <span id="opinion">opinion</span>, or <span id="satire">satire</span>.</p></div><form class=""><input id="name" type="url" name="input" value="" placeholder="Paste your URL here" required> <button id="submit-btn">submit</button></form></div><div class="form-loader"><div class="favicon"><i class="fas fa-check-circle"></i></div></div><div class="form-results"><p id="results-intro"><span id="results-text">Your article, "<span id="title"></span>," from <span id="outlet"></span> returned the following results:</span></p><div class="results-container"><div class="results"><div id="score-tag" class="meaning-cloud-data"></div><div id="subjectivity" class="meaning-cloud-data"></div><div id="agreement" class="meaning-cloud-data"></div><div id="irony" class="meaning-cloud-data"></div></div><div class="results-description"><div>Marks the polarity of the article. Possible values: strong positive, positive, neutral, negative, strong negative, or no polarity.</div><div>Marks the subjectivity of the article. Possible values: objective or subjective.</div><div>Marks the agreement between the sentiments in the article. Possible values: agreement or disagreement.</div><div>Indicates the irony level of the article. Possible values: ironic or non-ironic.</div></div></div></div><button class="back-btn"><a href="index.html"><i class="fas fa-arrow-circle-left"></i> Back</a></button></div><div id="col2"><img id="analysis-img"></div></div></main><script src="main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link id="favicon-img" rel="shortcut icon" type="image/jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <title>AccuCheck</title>
+</head>
+
+<body>
+
+    <header>
+        <header>
+            <div id="head-left">
+                <a href="index.html"><i class="fas fa-check-circle"></i><span class="heavy-font">Accu</span>Check</a>
+            </div>
+            <div id="head-right">
+                <a class="nav-links" href="#">About</a>
+                <a class="nav-links" href="#">Download App</a>
+                <a class="nav-links" href="#">Pricing</a>
+                <a class="nav-links" href="#">Log In</a>
+            </div>
+            <nav class="nav">
+                <div class="nav-list"></div>
+                <span class="close-btn"><i class='fas fa-times'></i></span>
+            </nav>
+            <div class="hamburger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+    </header>
+
+    <main>
+        <div id="container">
+            <div id="col1">
+                <div class="title">
+                    <h1>The news is overwhelming,<br> <span class="heavy-font">but it doesn't have to be.</span></h1>
+                </div>
+                <div class="starter-form">x
+                    <div class="description">
+                        <p>
+                            AccuCheck takes the stress out of your scroll! With our premium AI,
+                            AccuCheck helps you
+                            identify fact vs. opinion, real vs. fake, and keeps you up to date with the latest news on
+                            your
+                            feed.
+                        </p>
+                        <p>
+                            Paste the URL of an articles you're reading below and AccuCheck will tell you if the source
+                            is
+                            <span id="fact">fact-based</span>, <span id="opinion">opinion</span>, or <span
+                                id="satire">satire</span>.
+                        </p>
+                    </div>
+
+                    <form class="">
+                        <input id="name" type="url" name="input" value="" placeholder="Paste your URL here" required>
+                        <button id="submit-btn">submit</button>
+                    </form>
+                </div>
+
+                <div class="form-loader">
+                    <div class="favicon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+
+                <div class="form-results">
+                    <p id="results-intro">
+                        <span id="results-text">
+                            Your article, "<span id="title"></span>," from <span id="outlet"></span> returned the
+                            following
+                            results:
+                        </span>
+                    </p>
+                    <div class="results-container">
+                        <div class="results">
+                            <div id="score-tag" class="meaning-cloud-data"></div>
+                            <div id="subjectivity" class="meaning-cloud-data"></div>
+                            <div id="agreement" class="meaning-cloud-data"></div>
+                            <div id="irony" class="meaning-cloud-data"></div>
+                        </div>
+
+                        <div class="results-description">
+                            <div>
+                                Marks the polarity of the article. Possible values: strong positive, positive, neutral,
+                                negative, strong negative, or no polarity.
+                            </div>
+                            <div>
+                                Marks the subjectivity of the article. Possible values: objective or subjective.
+                            </div>
+
+                            <div>
+                                Marks the agreement between the sentiments in the article. Possible values: agreement or
+                                disagreement.
+                            </div>
+                            <div>Indicates the irony level of the article. Possible values: ironic or non-ironic.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="back-btn"><a href="index.html"><i class="fas fa-arrow-circle-left"></i>
+                        Back</a></button>
+            </div>
+            <div id="col2">
+                <img id="analysis-img">
+            </div>
+        </div>
+    </main>
+
+<script src="main.js"></script></body>
+
+</html>
