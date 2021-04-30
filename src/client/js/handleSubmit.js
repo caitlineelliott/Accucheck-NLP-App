@@ -28,8 +28,12 @@ async function handleSubmit(event) {
     // validate URL
     const validURL = checkURL(userURL);
 
-    // send valid URL to server + analyze with MeaningCloud
-    await sendData('/passURL', { url: validURL });
+    // abort catch
+    if (validURL) {
+        await sendData('/passURL', { url: validURL });
+    } else {
+        alert('please enter a correct URL')
+    }
 }
 
 export { handleSubmit }

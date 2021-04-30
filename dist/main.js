@@ -201,8 +201,12 @@ async function handleSubmit(event) {
     // validate URL
     const validURL = Object(_checkURL_js__WEBPACK_IMPORTED_MODULE_0__["checkURL"])(userURL);
 
-    // send valid URL to server + analyze with MeaningCloud
-    await Object(_sendData_js__WEBPACK_IMPORTED_MODULE_1__["sendData"])('/passURL', { url: validURL });
+    // abort catch
+    if (validURL) {
+        await Object(_sendData_js__WEBPACK_IMPORTED_MODULE_1__["sendData"])('/passURL', { url: validURL });
+    } else {
+        alert('please enter acorrect URL')
+    }
 }
 
 
