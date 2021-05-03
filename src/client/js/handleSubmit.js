@@ -29,10 +29,11 @@ async function handleSubmit(event) {
     const validURL = checkURL(userURL);
 
     // abort catch
-    if (validURL) {
-        await sendData('/passURL', { url: validURL });
-    } else {
-        alert('please enter a correct URL')
+    if (!validURL) {
+        alert('please enter a correct URL');
+        location.reload();
+    } else if (validURL) {
+        sendData('/passURL', { url: validURL });
     }
 }
 

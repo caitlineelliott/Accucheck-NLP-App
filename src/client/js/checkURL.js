@@ -5,7 +5,6 @@ function checkURL(userURL) {
         return validURL;
     }
     catch (e) {
-        alert('Invalid URL!');
         console.log('ERROR, INVALID URL:', e);
         return false;
     }

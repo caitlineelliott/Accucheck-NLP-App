@@ -149,7 +149,6 @@ function checkURL(userURL) {
         return validURL;
     }
     catch (e) {
-        alert('Invalid URL!');
         console.log('ERROR, INVALID URL:', e);
         return false;
     }
@@ -202,10 +201,11 @@ async function handleSubmit(event) {
     const validURL = Object(_checkURL_js__WEBPACK_IMPORTED_MODULE_0__["checkURL"])(userURL);
 
     // abort catch
-    if (validURL) {
-        await Object(_sendData_js__WEBPACK_IMPORTED_MODULE_1__["sendData"])('/passURL', { url: validURL });
-    } else {
-        alert('please enter acorrect URL')
+    if (!validURL) {
+        alert('please enter a correct URL');
+        location.reload();
+    } else if (validURL) {
+        Object(_sendData_js__WEBPACK_IMPORTED_MODULE_1__["sendData"])('/passURL', { url: validURL });
     }
 }
 
