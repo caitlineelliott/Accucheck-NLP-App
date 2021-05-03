@@ -28,13 +28,15 @@
             <a class="nav-links" href="#">Pricing</a>
             <a class="nav-links" href="#">Log In</a>
         </div>
-        <!-- Mobile Nav -->
+
+        <!-- Mobile Hamburger Nav -->
         <nav class="nav">
             <div class="nav-list"></div>
             <span class="close-btn">
-                <i class='fas fa-times'></i>
+                <i class="fas fa-times"></i>
             </span>
         </nav>
+
         <div class="hamburger-icon">
             <i class="fas fa-bars"></i>
         </div>
@@ -46,7 +48,7 @@
                 <div class="title">
                     <h1>
                         The news is overwhelming,<br>
-                        <span class="heavy-font">but it doesn't have to be.</span>
+                        <span class="heavy-font">but it doesn"t have to be.</span>
                     </h1>
                 </div>
                 <div class="starter-form">
@@ -72,11 +74,8 @@
 
                 <div class="form-results">
                     <p id="results-intro">
-                        <span id="results-text">
-                            Your article, "<span id="title"></span>," from <span id="outlet"></span> returned the
-                            following
-                            results:
-                        </span>
+                        Your article, "<span id="title"></span>," from <span id="outlet"></span> returned the
+                        following results:
                     </p>
                     <div class="results-container">
                         <div class="results">
@@ -94,7 +93,6 @@
                             <div id="subjectivity-description">
                                 Marks the subjectivity of the article. Possible values: objective or subjective.
                             </div>
-
                             <div id="agreement-description">
                                 Marks the agreement between the sentiments in the article. Possible values: agreement or
                                 disagreement.
@@ -114,17 +112,17 @@
                 </button>
             </div>
             <div id="col2">
-                <img id="analysis-img" src="../imgs/analysis.svg">
+                <img id="analysis-img" src="../imgs/analysis.svg" alt="Graphic of a woman analyzing documents">
             </div>
         </div>
     </main>
 
     <script>
         // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
+        if ("serviceWorker" in navigator) {
             // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/service-worker.js");
             });
         }
     </script>
