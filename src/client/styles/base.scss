@@ -36,16 +36,12 @@ a {
 
         #col1, #col2 {
             width: 80vw;
-            // height: 40vh;
-            // background: green;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         #col2 {
-            // height: 35vh;
-            // background: red;
 
             #analysis-img {
                 width: 100%;
