@@ -1,16 +1,8 @@
 import { checkURL } from './checkURL.js'
 import { sendData } from './sendData.js'
-// import Favicon from '../imgs/favicon.png'
-// import AnalysisImg from '../imgs/analysis.svg'
-
-// // load in images
-// const faviconImg = document.querySelector('#favicon-img');
-// const analysisImg = document.querySelector('#analysis-img');
-// faviconImg.href = Favicon;
-// analysisImg.src = AnalysisImg;
 
 document.addEventListener('DOMContentLoaded', function () {
-    let formBtn = document.querySelector('#submit-btn');
+    const formBtn = document.querySelector('#submit-btn');
     formBtn.addEventListener('click', handleSubmit);
 });
 
