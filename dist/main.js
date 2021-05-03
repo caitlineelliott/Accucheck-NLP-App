@@ -172,17 +172,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sendData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sendData.js */ "./src/client/js/sendData.js");
 
 
-// import Favicon from '../imgs/favicon.png'
-// import AnalysisImg from '../imgs/analysis.svg'
-
-// // load in images
-// const faviconImg = document.querySelector('#favicon-img');
-// const analysisImg = document.querySelector('#analysis-img');
-// faviconImg.href = Favicon;
-// analysisImg.src = AnalysisImg;
 
 document.addEventListener('DOMContentLoaded', function () {
-    let formBtn = document.querySelector('#submit-btn');
+    const formBtn = document.querySelector('#submit-btn');
     formBtn.addEventListener('click', handleSubmit);
 });
 
@@ -227,20 +219,25 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
     const hamIcon = document.querySelector('.hamburger-icon');
     const closeBtn = document.querySelector('.close-btn');
+
+    // active nav bar
     hamIcon.addEventListener('click', activeNav);
+
+    //inactive nav
+    closeBtn.addEventListener('click', restingNav);
 });
 
 const restingNav = () => {
-    hamIcon.classList.remove('hamburger-none');
+    document.querySelector('.close-btn').classList.add('hamburger-none');
     document.querySelector('nav').classList.add('nav');
     document.querySelector('nav').classList.remove('mobile-nav');
-    closeBtn.classList.remove('close-btn-active');
+    document.querySelector('.close-btn').classList.remove('close-btn-active');
     document.querySelector('.nav-list').innerHTML = '';
+    document.querySelector('.hamburger-icon').classList.remove('hamburger-none');
 };
 
 const activeNav = () => {
-    hamIcon.classList.add('hamburger-none');
-
+    document.querySelector('.hamburger-icon').classList.add('hamburger-none');
     const navItems = document.getElementsByClassName('nav-links');
     document.querySelector('.nav-list').innerHTML =
         `${navItems[0].outerHTML}<br>
@@ -250,8 +247,7 @@ const activeNav = () => {
 
     document.querySelector('nav').classList.add('mobile-nav');
     document.querySelector('nav').classList.remove('nav');
-    closeBtn.classList.add('close-btn-active');
-    closeBtn.addEventListener('click', restingNav);
+    document.querySelector('.close-btn').classList.add('close-btn-active');
     document.querySelector('.nav-list').addEventListener('click', restingNav);
 };
 
