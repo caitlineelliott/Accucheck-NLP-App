@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hamIcon = document.querySelector('.hamburger-icon');
     const closeBtn = document.querySelector('.close-btn');
+
+    // active nav bar
     hamIcon.addEventListener('click', activeNav);
+
+    //inactive nav
+    closeBtn.addEventListener('click', restingNav);
 });
 
 const restingNav = () => {
-    hamIcon.classList.remove('hamburger-none');
+    document.querySelector('.close-btn').classList.add('hamburger-none');
     document.querySelector('nav').classList.add('nav');
     document.querySelector('nav').classList.remove('mobile-nav');
-    closeBtn.classList.remove('close-btn-active');
+    document.querySelector('.close-btn').classList.remove('close-btn-active');
     document.querySelector('.nav-list').innerHTML = '';
+    document.querySelector('.hamburger-icon').classList.remove('hamburger-none');
 };
 
 const activeNav = () => {
-    hamIcon.classList.add('hamburger-none');
-
+    document.querySelector('.hamburger-icon').classList.add('hamburger-none');
     const navItems = document.getElementsByClassName('nav-links');
     document.querySelector('.nav-list').innerHTML =
         `${navItems[0].outerHTML}<br>
@@ -24,8 +29,7 @@ const activeNav = () => {
 
     document.querySelector('nav').classList.add('mobile-nav');
     document.querySelector('nav').classList.remove('nav');
-    closeBtn.classList.add('close-btn-active');
-    closeBtn.addEventListener('click', restingNav);
+    document.querySelector('.close-btn').classList.add('close-btn-active');
     document.querySelector('.nav-list').addEventListener('click', restingNav);
 };
 
