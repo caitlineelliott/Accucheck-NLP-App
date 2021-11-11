@@ -280,9 +280,32 @@ input::placeholder {
     .form-results .results-container .results {
       font-weight: 700;
       width: 45%; }
+      .form-results .results-container .results #score-tag {
+        height: 14vh; }
+      .form-results .results-container .results #subjectivity {
+        height: 10vh;
+        background-color: #d3f3ee; }
+      .form-results .results-container .results #agreement {
+        height: 12vh; }
+      .form-results .results-container .results #irony {
+        height: 8vh;
+        background-color: #d3f3ee; }
     .form-results .results-container .results-description {
       width: 55%;
       font-size: 3vw; }
+      .form-results .results-container .results-description #score-tag-description {
+        height: 14vh; }
+      .form-results .results-container .results-description #subjectivity-description {
+        height: 10vh;
+        background-color: #d3f3ee; }
+      .form-results .results-container .results-description #agreement-description {
+        height: 12vh; }
+      .form-results .results-container .results-description #irony-description {
+        height: 8vh;
+        background-color: #d3f3ee; }
+    .form-results .results-container .results-description > *,
+    .form-results .results-container .results > * {
+      padding: 10px; }
     .form-results .results-container .results-headers,
     .form-results .results-container .results,
     .form-results .results-container .results-description {

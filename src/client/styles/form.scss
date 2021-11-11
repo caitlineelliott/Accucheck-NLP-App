@@ -141,11 +141,54 @@ input::placeholder {
           .results {
             font-weight: 700;
             width: 45%;
+
+            #score-tag {
+                height: 14vh;
+            }
+
+            #subjectivity {
+                height: 10vh;
+                background-color: $blue;
+            }
+
+            #agreement {
+                height: 12vh;
+            }
+
+            #irony {
+                height: 8vh;
+                background-color: $blue;
+            }
+
+
           }
 
           .results-description {
               width: 55%;
               font-size: 3vw;
+
+              #score-tag-description {
+                  height: 14vh;
+              }
+
+              #subjectivity-description {
+                  height: 10vh;
+                  background-color: $blue;
+              }
+
+              #agreement-description {
+                  height: 12vh;
+              }
+
+              #irony-description {
+                  height: 8vh;
+                  background-color: $blue;
+              }
+          }
+
+          .results-description > *,
+          .results > * {
+              padding: 10px,
           }
 
           .results-headers,
