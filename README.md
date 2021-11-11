@@ -2,6 +2,12 @@
 
 An NLP processing app created as part of Udacity's Front End Web Devloper Nanodegree
 
+## Deployment Instructions
+- Download the app to your local machine
+- Compile with 'npm run build-prod' in the terminal
+- Start the server with 'npm run start'
+- The project is hosted at localhost:8081
+
 ## Languages
 - HTML
 - Sass
